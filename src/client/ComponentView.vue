@@ -26,10 +26,18 @@ const props = defineProps<{
 const { lang } = useData();
 const { get } = useLocaleMappings();
 
-const label = computed(() => {
+const labels = computed(() => {
     const mappings = { ...localMappings, ...(get() ?? {}) };
     // Default to English mappings if no locale-specific mappings are found
-    return mappings[lang.value] ?? localMappings.en;
+    const { previewLabel: preview, codeLabel: code } =
+        mappings[lang.value] ?? localMappings.en;
+    return [
+        {
+            label: preview,
+            value: "preview",
+        },
+        { label: code, value: "code" },
+    ] as const;
 });
 
 const decodedSrc = ref("");
@@ -74,16 +82,7 @@ async function copyCode() {
 <template>
     <div class="vp-component-tabs">
         <header>
-            <template
-                v-for="{ label, value } in [
-                    {
-                        label: label.previewLabel,
-                        value: 'preview',
-                    },
-                    { label: label.codeLabel, value: 'code' },
-                ] as const"
-                :key="value"
-            >
+            <template v-for="{ label, value } in labels" :key="value">
                 <input
                     :id="`tab-${tabGroupId}-${value}`"
                     type="radio"
@@ -91,19 +90,27 @@ async function copyCode() {
                     style="position: fixed; opacity: 0; pointer-events: none"
                     :data-checked="activedTab === value"
                 />
-                <label :for="`tab-${tabGroupId}-${value}`" @click="activedTab = value">{{
-                    label
-                }}</label>
+                <label
+                    :for="`tab-${tabGroupId}-${value}`"
+                    @click="activedTab = value"
+                    >{{ label }}</label
+                >
             </template>
         </header>
 
-        <main v-if="activedTab === 'preview'">
+        <main v-show="activedTab === 'preview'">
             <slot />
         </main>
 
-        <section v-else-if="activedTab === 'code'">
+        <div
+            v-show="activedTab === 'code'"
+            :class="`language-vue${activedTab === 'code' ? ' active' : ''}`"
+            style="margin: 0px"
+        >
+            <button title="" class="copy"></button>
+            <span class="lang">Vue</span>
             <span v-html="highlightedSrc" />
-        </section>
+        </div>
     </div>
 </template>
 
