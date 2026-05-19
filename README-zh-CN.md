@@ -8,7 +8,7 @@
 
 - [x] **组件预览** 直接在文档中查看组件的渲染输出。
 - [x] **语法高亮** 兼容VitePress的语法高亮。
-- [ ] **代码复制** 一键复制组件的源代码。
+- [x] **代码复制** 一键复制组件的源代码。
 - [x] **深色模式支持** 自动适应 VitePress 的浅色和深色主题。
 - [x] **轻量级** 无复杂的依赖项, 仅 `2kb` / gzip:`1kb`。
 - [x] **国际化支持** 默认支持中文和英语，可通过配置来支持其他语言。
@@ -143,7 +143,7 @@ import Button from './Button.vue'
 ##
 ```
 
-你可以前往此处的[查看效果](https://heroui-vue-docs.vercel.app/zh/components/button.html#%E4%BD%BF%E7%94%A8)。
+你可以前往此处的[查看效果](https://vitepress-plugin-component-playgrou.vercel.app/)。
 ## 许可证
 
 [MIT](LICENSE)

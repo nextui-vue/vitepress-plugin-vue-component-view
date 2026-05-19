@@ -8,7 +8,7 @@ A VitePress plugin to display Vue components in your documentation with an autom
 
 - [x] **Component Preview** - Directly view the rendered output of your component within the documentation.
 - [x] **Syntax Highlighting** - Compatible with VitePress's syntax highlighting.
-- [ ] **Code Copying** - One-click copy for the component's source code.
+- [x] **Code Copying** - One-click copy for the component's source code.
 - [x] **Dark Mode Support** - Automatically adapts to VitePress's light and dark themes.
 - [x] **Lightweight** - No complex dependencies, only `2kb` / gzip:`1kb`.
 - [x] **Internationalization Support** - Default support for Chinese and English, configurable for other languages.
@@ -145,7 +145,7 @@ import Button from './Button.vue'
 
 You can view the component's preview and source code in the tabs above.
 
-You can check out the [live demo here](https://heroui-vue-docs.vercel.app/zh/components/button.html#%E4%BD%BF%E7%94%A8).
+You can check out the [live demo here](https://vitepress-plugin-component-playgrou.vercel.app/).
 
 ## Notes
 
