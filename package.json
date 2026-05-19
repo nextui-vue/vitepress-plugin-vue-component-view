@@ -41,7 +41,6 @@
     "type": "git",
     "url": "https://github.com/heroui-vue/vitepress-plugin-component"
   },
-  "packageManager": "pnpm@11.1.2",
   "devDependencies": {
     "@babel/parser": "8.0.0-rc.5",
     "@babel/traverse": "8.0.0-rc.5",
