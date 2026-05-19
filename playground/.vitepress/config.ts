@@ -7,10 +7,13 @@ export default defineConfig({
   description: "vitepress-plugin-component plugin",
   themeConfig: {
     socialLinks: [
-      { icon: "github", link: "https://github.com/heroui-vue/heroui-vue" },
+      {
+        icon: "github",
+        link: "https://github.com/heroui-vue/vitepress-plugin-component",
+      },
       {
         icon: "npm",
-        link: "https://www.npmjs.com/package/vitepress-plugin-component",
+        link: "https://npmx.dev/package/vitepress-plugin-component",
       },
     ],
   },
