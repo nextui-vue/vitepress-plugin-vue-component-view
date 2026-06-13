@@ -3,8 +3,8 @@
   "version": "1.2.0",
   "description": "VitePress plugin that renders Vue components with tabs showing preview and source code",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
