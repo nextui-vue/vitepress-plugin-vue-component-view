@@ -1,6 +1,9 @@
 {
   "name": "vitepress-plugin-component",
   "version": "1.2.0",
+  "bugs": {
+    "url": "https://github.com/heroui-vue/vitepress-plugin-component/issues"
+  },
   "description": "VitePress plugin that renders Vue components with tabs showing preview and source code",
   "type": "module",
   "main": "dist/index.js",
