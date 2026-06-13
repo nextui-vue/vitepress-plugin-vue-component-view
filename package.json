@@ -54,5 +54,9 @@
     "unplugin-vue": "^6.2.0",
     "vitepress": "latest",
     "vue": "^3.5.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/heroui-vue/vitepress-plugin-component/issues"
+  },
+  "homepage": "https://github.com/heroui-vue/vitepress-plugin-component#readme"
 }
